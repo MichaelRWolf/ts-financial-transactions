@@ -1,18 +1,5 @@
 // test/transaction_with_splits.test.ts
-import {Transaction} from '../src/Transaction';
-
-class TransactionSplit extends Transaction {
-    parent: Transaction;
-
-    constructor(parent: Transaction, account: string, dateString: string, payee: string, amount: number) {
-        super(account ?? parent.account,
-            dateString ?? parent.date,
-            payee,
-            amount
-        );
-        this.parent = parent;
-    }
-}
+import {Transaction, TransactionSplit} from '../src/Transaction';
 
 
 describe('Transaction with Splits', () => {

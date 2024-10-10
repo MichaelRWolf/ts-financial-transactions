@@ -55,5 +55,18 @@ export class Transaction {
     addSplit(childTransaction: Transaction) {
 
     }
+    
+}
 
+export class TransactionSplit extends Transaction {
+    parent: Transaction;
+
+    constructor(parent: Transaction, account: string, dateString: string, payee: string, amount: number) {
+        super(account ?? parent.account,
+            dateString ?? parent.date,
+            payee,
+            amount
+        );
+        this.parent = parent;
+    }
 }
