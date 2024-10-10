@@ -6,6 +6,7 @@ export class Transaction {
     set amount(value: number) {
         this._amount = value;
     }
+
     get payee(): string {
         return this._payee;
     }
@@ -13,6 +14,7 @@ export class Transaction {
     set payee(value: string) {
         this._payee = value;
     }
+
     get date(): Date {
         return this._date;
     }
@@ -20,6 +22,7 @@ export class Transaction {
     set date(value: Date) {
         this._date = value;
     }
+
     get account(): string {
         return this._account;
     }
@@ -27,6 +30,7 @@ export class Transaction {
     set account(value: string) {
         this._account = value;
     }
+
     private _account: string;
     private _date: Date;
     private _payee: string;
@@ -45,7 +49,7 @@ export class Transaction {
     }
 
     addSplit(childTransaction: Transaction) {
-        
+
     }
 
 }
