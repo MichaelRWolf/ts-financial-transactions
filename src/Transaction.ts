@@ -15,11 +15,11 @@ export class Transaction {
         this._payee = value;
     }
 
-    get date(): Date {
+    get date(): string {
         return this._date;
     }
 
-    set date(value: Date) {
+    set date(value: string) {
         this._date = value;
     }
 
@@ -32,20 +32,24 @@ export class Transaction {
     }
 
     private _account: string;
-    private _date: Date;
+    private _date: string;
     private _payee: string;
     private _amount: number;
 
     constructor(account: string, dateString: string, payee: string, amount: number) {
+        const parsedDate = new Date(dateString);
+        if (isNaN(parsedDate.getTime())) {
+            throw new Error('Invalid date format');
+        }
         this._account = account;
-        this._date = new Date(dateString);
+        this._date = dateString;
         this._payee = payee;
         this._amount = amount;
 
     }
 
     dateOnly(): string {
-        return this.date.toISOString().split('T')[0];
+        return new Date(this.date).toISOString().split('T')[0];
     }
 
     addSplit(childTransaction: Transaction) {
