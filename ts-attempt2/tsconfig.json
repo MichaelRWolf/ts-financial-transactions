@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "ES5",
+    "outDir": "./dist",
+    "rootDir": ".",
+    "strict": true,
+    "module": "ES6"
+  },
+  "include": ["src/**/*", "tests/**/*.ts"],
+  "exclude": ["node_modules"]
+}
