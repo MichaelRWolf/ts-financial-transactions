@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="951b4a59-d639-4609-ac80-147683e870ad" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../first-attempt/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ts-attempt/jest.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../first-attempt/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ts-attempt/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../first-attempt/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ts-attempt/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../first-attempt/src/Transaction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../ts-attempt/src/Transaction.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../first-attempt/test/setup.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../ts-attempt/test/setup.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../first-attempt/test/transaction_with_splits.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../ts-attempt/test/transaction_with_splits.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../first-attempt/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ts-attempt/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jest.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Transaction.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/setup.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/transaction_with_splits.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tsconfig.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MichaelRWolf"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MichaelRWolf/ts-financial-transactions.git",
+    "accountId": "5fb9457e-b02a-418f-bc97-3f5731331678"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2naboFtG9pSsHjgjucXbynfxWZN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.pytest for test_transaction.TestTransaction.executor": "Run",
+    "Python tests.pytest for test_transaction.TestTransaction.test_has_attributes.executor": "Run",
+    "Python tests.pytest for test_transaction.TestTransaction.test_to_csv_with_all_headers.executor": "Run",
+    "Python tests.pytest for test_transaction.TestTransactionSplit.executor": "Run",
+    "Python tests.pytest for test_transaction.TestTransactionSplit.test_constructor_with_parent_transaction.executor": "Run",
+    "Python tests.pytest for test_transaction.TestTransactionWithSplits.executor": "Run",
+    "Python tests.pytest for test_transaction.TestTransactionWithSplits.test_add_split.executor": "Run",
+    "Python tests.pytest in test_transaction.py.executor": "Run",
+    "Python.Transaction.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/michael/repos/ts-financial-transactions/second-attempt"
+  }
+}]]></component>
+  <component name="RunManager" selected="Python tests.pytest for test_transaction.TestTransaction">
+    <configuration name="pytest for test_transaction.TestTransaction" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="second-attempt" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_transaction.TestTransaction&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_transaction.TestTransactionSplit" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="second-attempt" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_transaction.TestTransactionSplit&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_transaction.TestTransactionSplit.test_constructor_with_parent_transaction" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="second-attempt" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_transaction.TestTransactionSplit.test_constructor_with_parent_transaction&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_transaction.TestTransactionWithSplits" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="second-attempt" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_transaction.TestTransactionWithSplits&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_transaction.TestTransactionWithSplits.test_add_split" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="second-attempt" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_transaction.TestTransactionWithSplits.test_add_split&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest for test_transaction.TestTransaction" />
+        <item itemvalue="Python tests.pytest for test_transaction.TestTransactionSplit" />
+        <item itemvalue="Python tests.pytest for test_transaction.TestTransactionWithSplits" />
+        <item itemvalue="Python tests.pytest for test_transaction.TestTransactionWithSplits.test_add_split" />
+        <item itemvalue="Python tests.pytest for test_transaction.TestTransactionSplit.test_constructor_with_parent_transaction" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="951b4a59-d639-4609-ac80-147683e870ad" name="Changes" comment="" />
+      <created>1729214306773</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729214306773</updated>
+    </task>
+    <servers />
+  </component>
+</project>
