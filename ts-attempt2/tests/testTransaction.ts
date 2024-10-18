@@ -74,9 +74,15 @@ describe('TransactionWithSplits', () => {
 describe('TransactionSplit', () => {
   it('should have a parent transaction', () => {
     const parentTransaction = Transaction.createTransaction('Bank', '2024-10-11', 'Payee A', '0.00', 'SPLIT') as TransactionWithSplits;
-    const split = new TransactionSplit(parentTransaction, 'Bank', '2024-10-11', 'Payee B', '50.00', 'groceries');
-    expect(split.parent).to.equal(parentTransaction);
-    expect(parentTransaction.splits[0]).to.equal(split);
+
+    const split_1 = new TransactionSplit(parentTransaction, 'Bank', '2024-10-11', 'Payee B', '50.00', 'groceries');
+    expect(split_1.parent).to.equal(parentTransaction);
+    expect(split_1.parent.splits).to.be.an('array').of.length(1)
+    expect(parentTransaction.splits[0]).to.equal(split_1);
+
+    const split_2 = new TransactionSplit(parentTransaction, 'Bank', '2024-10-11', 'Payee C', '500.00', 'transportation');
+    expect(split_2.parent.splits).to.be.an('array').of.length(2)
+    expect(parentTransaction.splits[1]).to.equal(split_2);
   });
 
   it('should pass remaining parameters to the parent class constructor', () => {
