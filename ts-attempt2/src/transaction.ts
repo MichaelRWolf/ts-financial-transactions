@@ -7,7 +7,13 @@ export class Transaction {
   private _amount: string;
   private _category: string;
 
-  constructor(institution: string, date: string, payee: string, amount: string, category: string) {
+  constructor(
+    institution: string,
+    date: string,
+    payee: string,
+    amount: string,
+    category: string,
+  ) {
     this._institution = institution;
     this._date = this.validateDate(date);
     this._payee = payee;
@@ -15,23 +21,35 @@ export class Transaction {
     this._category = category;
   }
 
-  static createTransaction(institution: string, date: string, payee: string, amount: string, category: string): Transaction {
-    if (category === 'SPLIT') {
-      return new TransactionWithSplits(institution, date, payee, amount, category);
+  static createTransaction(
+    institution: string,
+    date: string,
+    payee: string,
+    amount: string,
+    category: string,
+  ): Transaction {
+    if (category === "SPLIT") {
+      return new TransactionWithSplits(
+        institution,
+        date,
+        payee,
+        amount,
+        category,
+      );
     }
     return new Transaction(institution, date, payee, amount, category);
   }
 
   private validateDate(date: string): string {
     if (!/\d{4}-\d{2}-\d{2}/.test(date)) {
-      throw new Error('Invalid date format');
+      throw new Error("Invalid date format");
     }
     return date;
   }
 
   private validateAmount(amount: string): string {
     if (isNaN(parseFloat(amount))) {
-      throw new Error('Invalid amount format');
+      throw new Error("Invalid amount format");
     }
     return amount;
   }
@@ -57,14 +75,20 @@ export class Transaction {
   }
 
   toCsv(headers: string[], values: string[]): string {
-    return values.join(',');
+    return values.join(",");
   }
 }
 
 export class TransactionWithSplits extends Transaction {
   private _splits: TransactionSplit[];
 
-  constructor(institution: string, date: string, payee: string, amount: string, category: string) {
+  constructor(
+    institution: string,
+    date: string,
+    payee: string,
+    amount: string,
+    category: string,
+  ) {
     super(institution, date, payee, amount, category);
     this._splits = [];
   }
@@ -81,7 +105,14 @@ export class TransactionWithSplits extends Transaction {
 export class TransactionSplit extends Transaction {
   private _parent: TransactionWithSplits;
 
-  constructor(parentTransaction: TransactionWithSplits, institution: string, date: string, payee: string, amount: string, category: string) {
+  constructor(
+    parentTransaction: TransactionWithSplits,
+    institution: string,
+    date: string,
+    payee: string,
+    amount: string,
+    category: string,
+  ) {
     super(institution, date, payee, amount, category);
     this._parent = parentTransaction;
     parentTransaction.splits.push(this);
@@ -95,5 +126,5 @@ export class TransactionSplit extends Transaction {
 export default {
   Transaction,
   TransactionWithSplits,
-  TransactionSplit
+  TransactionSplit,
 };

@@ -54,8 +54,7 @@ class Transaction:
         return cls(institution, date, payee, amount, category)
 
     def to_csv(self, headers, values):
-        return ",".join(values)
-
+        return ",".join(values) 
 class TransactionWithSplits(Transaction):
     def __init__(self, institution, date, payee, amount, category):
         super().__init__(institution, date, payee, amount, category)
@@ -68,8 +67,15 @@ class TransactionWithSplits(Transaction):
     def get_splits(self):
         return self._splits
 
+
 class TransactionSplit(Transaction):
-    def __init__(self, parent_transaction, institution, date, payee, amount, category):
+    def __init__(self,
+                 parent_transaction,
+                 institution,
+                 date,
+                 payee,
+                 amount,
+                 category):
         super().__init__(institution, date, payee, amount, category)
         self._parent = parent_transaction
         parent_transaction.splits.append(self)
