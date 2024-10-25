@@ -6,16 +6,17 @@ Goal: Transform CSV TransactionLog file by distributing split attributes from pa
 - Input will be CSV file.  
 - First row has headers.  
 - Subsequent rows contain transactions.
-- Most transactions are described on a single row.
+- Most transactions are described on a single row.  They have at least 1 non-empty value in the fields before 'category' or 'amount'.
 - Split transactions are described on 2 or more rows
   - Let's call the first row the "parent", and all other rows "children".
   - All children are dependent on this one parent.
   - The "parent" of a split transaction has 'category' equal to "SPLIT".
   - Convert parent's 'amount' field to a number (after striping optional "$"), then throw an exception if it is non-zero.
-  - The "children" of a split transaction have a 'category'
-  - The "children" of a split transaction have empty fields, and _implicit_ meaning is that the "children" inherit these values from the "parent"
+  - The children of a parent have 2 or more leading fields that are empty.
+  - The "children" of a split transaction have a 'category' and 'amount' that must be preserved (i.e. not inherited from parent)
+  - All empty fields of a child are _implied_ to be inherited from the parent.
   
-The goal of this transformation is to preserve a child's 'category' and 'amount' field, and be _explicit_ about empty/inherited fields by filling empty fields with the value from the parent.  This will allow subsequent processing to be simpler since it need not retain the child/parent relationship.
+The goal of this transformation is to make all empty child fields to be _explicit_ by filling them in with the corresponding value from the parent.  This will allow subsequent processing to be simpler since it need not retain the child/parent relationship.  All other transactions (independent transactions and parent transactions) are unchanged and preserved.
 
 
 Example:
@@ -49,5 +50,13 @@ Create a python function 'distribute_all_parent_attributes' that accepts a list 
 # Task - create a 'main' function
 
 Read CSV from stdin.
-Write transformed CSV to stdout.
+Write transformed CSV to stdout.  Double-quote all values.
 Add she-bang line so file can be executable.
+
+
+# Task - python linter
+
+Correct any violations in this list
+D103
+E305
+D200
