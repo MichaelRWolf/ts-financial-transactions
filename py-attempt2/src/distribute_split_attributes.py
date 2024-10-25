@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 """
+Distribute parent attributes to children transactions
+
 This module provides functionality for transforming CSV transaction logs by distributing attributes 
 from parent transactions to child transactions.
 
@@ -16,6 +18,7 @@ Functions:
 import csv
 import sys
 import copy
+
 
 def distribute_all_parent_attributes(transactions):
     """
@@ -40,8 +43,9 @@ def distribute_all_parent_attributes(transactions):
                 raise ValueError("Parent transaction amount must be zero.")
             parent_transaction = transaction
             transformed_transactions.append(copy.deepcopy(transaction))
-        # If the transaction is a child (empty leading fields), inherit from parent
+        # If the transaction is a child (empty leading fields)...
         elif parent_transaction and not any(transaction[key] for key in ['account', 'state', 'postedOn', 'payee']):
+            # ...inherit from parent
             child_transaction = copy.deepcopy(parent_transaction)
             # Update child_transaction with non-empty values from transaction
             for key, value in transaction.items():
@@ -51,16 +55,20 @@ def distribute_all_parent_attributes(transactions):
         # Otherwise, it's an independent transaction, just append it
         else:
             transformed_transactions.append(copy.deepcopy(transaction))
-            
     return transformed_transactions
 
+
 def main():
-    """
-    Read CSV from stdin, process it, and write the transformed CSV to stdout.
-    """
+    """Read CSV from stdin, write the transformed CSV to stdout."""
     # Ensure consistent newline handling
-    input_stream = open(sys.stdin.fileno(), mode='r', newline='', encoding='utf-8')
-    output_stream = open(sys.stdout.fileno(), mode='w', newline='', encoding='utf-8')
+    input_stream = open(sys.stdin.fileno(),
+                        mode='r',
+                        newline='',
+                        encoding='utf-8')
+    output_stream = open(sys.stdout.fileno(),
+                         mode='w',
+                         newline='',
+                         encoding='utf-8')
 
     # Read CSV from stdin
     reader = csv.DictReader(input_stream)
@@ -70,9 +78,12 @@ def main():
     transformed_transactions = distribute_all_parent_attributes(transactions)
 
     # Write transformed CSV to stdout
-    writer = csv.DictWriter(output_stream, fieldnames=reader.fieldnames)
+    writer = csv.DictWriter(output_stream,
+                            fieldnames=reader.fieldnames,
+                            quoting=csv.QUOTE_ALL)
     writer.writeheader()
     writer.writerows(transformed_transactions)
+
 
 if __name__ == "__main__":
     main()
